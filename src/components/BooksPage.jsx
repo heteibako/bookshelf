@@ -16,11 +16,21 @@ export default class BooksPage extends Component {
   }
 
   render() {
+    const { books } = this.state;
     return (
-      <div>
-        {this.state.books.map((book) => (
-          <BookItem title={book.title} />
-        ))}
+      <div className="container">
+        <div className="row">
+          {books.map((book) => (
+            <div className="col-4" key={book.id}>
+              <BookItem
+                title={book.title}
+                coverImg={book.imageLinks.thumbnail}
+                description={book.description}
+                bookLink={book.id}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

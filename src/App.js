@@ -4,22 +4,19 @@ import { createBrowserHistory } from 'history';
 import NavBar from './components/NavBar';
 import BooksPage from './components/BooksPage';
 import SearchPage from './components/SearchPage';
+import BookDetail from './components/BookDetail';
 var hist = createBrowserHistory();
 const App = () => {
   return (
     <div>
       <Router history={hist}>
         <NavBar />
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col">
-              <Switch>
-                <Route exact path="/" component={BooksPage} />
-                <Route exact path="/search" component={SearchPage} />
-              </Switch>
-            </div>
-          </div>
-        </div>
+
+        <Switch>
+          <Route exact path="/" component={BooksPage} />
+          <Route exact path="/search" component={SearchPage} />
+          <Route exact path="/book/:id" component={BookDetail} />
+        </Switch>
       </Router>
     </div>
   );
