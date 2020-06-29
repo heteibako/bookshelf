@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, CardBody, CardText, CardFooter, CardTitle, CardImg } from 'reactstrap';
+import { Card, CardBody, CardText, CardFooter, CardTitle } from 'reactstrap';
 const BookItem = ({ title, coverImg, description, bookLink }) => {
   return (
     <Card

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { search } from '../BooksAPI';
-import { queryHelpers } from '@testing-library/react';
 import BookItem from './BookItem';
 
 class SearchPage extends Component {
