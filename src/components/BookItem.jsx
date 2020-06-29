@@ -12,7 +12,7 @@ const BookItem = ({ title, coverImg, description, bookLink }) => {
         <CardTitle className="text-left" tag="div">
           <h3>{title}</h3>
         </CardTitle>
-        <CardText style={{ color: 'white' }}>{description.slice(0, 50)}</CardText>
+        <CardText style={{ color: 'white' }}>{description && description.slice(0, 150)}</CardText>
         <CardFooter className="text-left">
           <div className="stats-link pull-right">
             <Link to={`/book/${bookLink}`} style={{ color: 'white' }}>
